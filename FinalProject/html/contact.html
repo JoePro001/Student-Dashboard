@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+    Project Title: School Registration System Web App
+
+    Project Description: Create a web application for a school registration system that
+    allows students to register for courses, and their schedules.
+    
+    Final Project
+    Author: Carl Provost
+    Date: 10/23/2023  
+
+    Filename: contact.html
+   -->
+
+<head>
+    <!-- Meta information for the document -->
+    <title>PCC School Registration System Web App</title>
+    <!-- Set character encoding and viewport for better rendering -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Define keywords for search engine optimization -->
+    <meta name="keywords" content="school, registration, schedules, dashboard" />
+    <!-- Linking to Bootstrap for styling -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Linking to custom CSS files -->
+    <link href="../css/reset.css" rel="stylesheet" />
+    <link href="../css/layout.css" rel="stylesheet" />
+    <link href="../css/style.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="container-sm">
+        <!-- Header Section -->
+        <header>
+            <div class="navwraper">
+                <!-- Logo Section -->
+                <div class="logo">
+                    <img src="../img/logo200.jpg" alt="Provost Coding College Logo" srcset="" />
+                </div>
+                <!-- Navigation Links -->
+                <div class="nav justify-content-end justify-content-sm-center w-100">
+                    <nav>
+                        <div id="nav-container">
+                            <ul id="list">
+                                <li><a href="dashboard.html">Dashboard Page</a></li>
+                                <li><a href="registration.html">Registration Page</a></li>
+                                <li><button id="logOut">Log Out</button></li>
+                            </ul>
+                            <!-- Hamburger menu for small screens -->
+                            <button id="ham"><img src="../img/hamburger.svg" alt="icon" /></button>
+                            <button id="close">X</button>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content Section -->
+        <main>
+            <div class="container">
+                <h1>Contact Form</h1>
+                <hr>
+                <!-- Contact Form -->
+                <form>
+                    <!-- First Name Input -->
+                    <label class="form-label" for="fname">First Name:</label>
+                    <div>
+                        <input class="form-control" type="text" name="firstname" placeholder="Your first name">
+                    </div>
+                    <!-- Last Name Input -->
+                    <label class="form-label" for="lname">Last Name:</label>
+                    <div>
+                        <input class="form-control" type="text" name="lastname" placeholder="Your last name">
+                    </div>
+                    <!-- Email Input -->
+                    <label class="form-label" for="email">E-mail Address:</label>
+                    <div>
+                        <!-- Language Selection Dropdown -->
+                        <input class="form-control" type="email" name="e-mail" placeholder="Your e-mail address">
+                    </div>
+                    <label class="form-label" for="lov">Language:</label>
+                    <div>
+                        <select class="form-select form-select-sm" name="lov">
+                            <option selected>Choose Language</option>
+                            <!-- Options for different programming languages -->
+                            <option value="html">HTML</option>
+                            <option value="css">CSS</option>
+                            <option value="javascript">JAVASCRIPT</option>
+                            <option value="swift">SWIFT</option>
+                            <option value="python">PYTHON</option>
+                            <option value="java">JAVA</option>
+                            <option value="php">PHP</option>
+                            <option value="c">C</option>
+                            <option value="c++">C++</option>
+                            <option value="c#">C#</option>
+                            <option value="golang">GOLANG</option>
+                            <option value="r">R</option>
+                            <option value="typescript">TYPESCRIPT</option>
+                            <option value="scala">SCALA</option>
+                            <option value="shell">SHELL</option>
+                            <option value="powershell">POWERSHELL</option>
+                            <option value="perl">PERL</option>
+                            <option value="haskell">HASKELL</option>
+                            <option value="kotlin">KOTLIN</option>
+                            <option value="vbnet">VISUAL BASIC .NET</option>
+                            <option value="sql">SQL</option>
+                            <option value="delphi">DELPHI</option>
+                            <option value="matlab">MATLAB</option>
+                            <option value="groovy">GROOVY</option>
+                            <option value="lua">LUA</option>
+                            <option value="rust">RUST</option>
+                            <option value="ruby">RUBY</option>
+                            <option value="dart">DART</option>
+                            <option value="dm">DM</option>
+                            <option value="mysql">MYSQL</option>
+                        </select>
+                    </div>
+                    <br>
+                    <!-- Description Textarea -->
+                    <label class="form-label" for="subject">desciption:</label>
+                    <textarea class="subject form-control" name="subject" rows="4"
+                        placeholder="How may we help you?"></textarea>
+                    <br>
+                    <!-- Submit Button -->
+                    <div class="mb-3">
+                        <button type="submit" class="btn btn-primary mb-3 btn-login">Submit</button>
+                    </div>
+                </form>
+                <hr>
+                <!-- Contact Information -->
+                <p>Customer Service contact #555-555-5555</p>
+                <iframe id="gmap"
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2811.297731283165!2d-97.70324195430798!3d30.402961538310837!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8644cc04a13b8723%3A0x917faa48756bfdb2!2sAustn%20Community%20College%3A%20Northridge%20Campus!5e0!3m2!1sen!2sus!4v1688683199204!5m2!1sen!2sus"
+                    width="600" height="450" style="border:0;" allowfullscreen="true" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </main>
+        <!-- Return to Top Link and Footer -->
+        <div class="container">
+            <a href="#top" id="rtt">Return To Top</a>
+            <hr>
+            <!-- Copyright information -->
+            <footer>&#128187; &copy; 2023, All Rights Reserved. &#128187;</footer>
+        </div>
+    </div>
+    <!-- External JavaScript files -->
+    <script src="../js/global.js" defer></script>
+</body>
+
+</html>

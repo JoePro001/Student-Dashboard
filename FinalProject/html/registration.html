@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+    Project Title: School Registration System Web App
+
+    Project Description: Create a web application for a school registration system that
+    allows students to register for courses, and their schedules.
+    
+    Final Project
+    Author: Carl Provost
+    Date: 10/23/2023  
+
+    Filename: registration.html
+   -->
+
+<head>
+    <!-- Meta information for the document -->
+    <title>PCC School Registration System Web App</title>
+    <!-- Set character encoding and viewport for better rendering -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Define keywords for search engine optimization -->
+    <meta name="keywords" content="school, registration, schedules, dashboard" />
+    <!-- Linking to Bootstrap for styling -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Linking to custom CSS files -->
+    <link href="../css/reset.css" rel="stylesheet" />
+    <link href="../css/layout.css" rel="stylesheet" />
+    <link href="../css/style.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="container-sm">
+        <!-- Header Section -->
+        <header>
+            <div class="navwraper">
+                <!-- Logo Section -->
+                <div class="logo">
+                    <img src="../img/logo200.jpg" alt="Provost Coding College Logo" srcset="" />
+                </div>
+                <!-- Navigation Links -->
+                <div class="nav justify-content-end justify-content-sm-center w-100">
+                    <nav>
+                        <div id="nav-container">
+                            <ul id="list">
+                                <li><a href="dashboard.html">Dashboard Page</a></li>
+                                <li><a href="contact.html">Contact Page</a></li>
+                                <li><button id="logOut">Log Out</button></li>
+                            </ul>
+                            <!-- Hamburger menu for small screens -->
+                            <button id="ham"><img src="../img/hamburger.svg" alt="icon" /></button>
+                            <button id="close">X</button>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main content section -->
+        <main>
+            <div class="container">
+                <h1>Course Registration</h1>
+                <!-- Form for course selection -->
+                <form method="post" id="registration-form">
+                    <label for="courses">Select Courses:</label>
+                    <hr>
+                    <div class="reg" id="courseList">
+                        <!-- Left column of checkboxes -->
+                        <div class="left">
+                            <!-- Checkboxes for various courses -->
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="1000" value="html101">
+                                <label class="form-check-label" for="html">HTML 101</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="1001" value="html201">
+                                <label class="form-check-label" for="html">HTML 201</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="1002" value="html301">
+                                <label class="form-check-label" for="html">HTML 301</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="2000" value="css101">
+                                <label class="form-check-label" for="css">CSS 101</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="2001" value="css201">
+                                <label class="form-check-label" for="css">CSS 201</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="2002" value="css301">
+                                <label class="form-check-label" for="css">CSS 301</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="3000" value="javascript101">
+                                <label class="form-check-label" for="javascript">JAVASCRIPT 101</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="3001" value="javascript201">
+                                <label class="form-check-label" for="javascript">JAVASCRIPT 201</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="3002" value="javascript301">
+                                <label class="form-check-label" for="javascript">JAVASCRIPT 301</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="4000" value="swift101">
+                                <label class="form-check-label" for="swift">SWIFT 101</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="4001" value="swift201">
+                                <label class="form-check-label" for="swift">SWIFT 201</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="4002" value="swift301">
+                                <label class="form-check-label" for="swift">SWIFT 301</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="5000" value="python101">
+                                <label class="form-check-label" for="python">PYTHON 101</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="5001" value="python201">
+                                <label class="form-check-label" for="python">PYTHON 201</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="5002" value="python301">
+                                <label class="form-check-label" for="python">PYTHON 301</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="6000" value="java101">
+                                <label class="form-check-label" for="java">JAVA 101</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="6001" value="java201">
+                                <label class="form-check-label" for="java">JAVA 201</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="6002" value="java301">
+                                <label class="form-check-label" for="java">JAVA 301</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="7000" value="php101">
+                                <label class="form-check-label" for="php">PHP 101</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="7001" value="php201">
+                                <label class="form-check-label" for="php">PHP 201</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="7002" value="php301">
+                                <label class="form-check-label" for="php">PHP 301</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="8000" value="c101">
+                                <label class="form-check-label" for="c">C 101</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="8001" value="c201">
+                                <label class="form-check-label" for="c">C 201</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="8002" value="c301">
+                                <label class="form-check-label" for="c">C 301</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="9000" value="c++101">
+                                <label class="form-check-label" for="c++">C++ 101</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="9001" value="c++201">
+                                <label class="form-check-label" for="c++">C++ 201</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="9002" value="c++301">
+                                <label class="form-check-label" for="c++">C++ 301</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="10000" value="c#101">
+                                <label class="form-check-label" for="c#">C# 101</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="10001" value="c#201">
+                                <label class="form-check-label" for="c#">C# 201</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="10002" value="c#301">
+                                <label class="form-check-label" for="c#">C# 301</label>
+                            </div>
+                        </div>
+                        <!-- Center column of checkboxes -->
+                        <div class="center">
+                            <!-- Checkboxes for various courses -->
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="11000" value="golang101">
+                                <label class="form-check-label" for="golang">GOLANG 101</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="11001" value="golang201">
+                                <label class="form-check-label" for="golang">GOLANG 201</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="11002" value="golang301">
+                                <label class="form-check-label" for="golang">GOLANG 301</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="12000" value="r101">
+                                <label class="form-check-label" for="r">R 101</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="12001" value="r201">
+                                <label class="form-check-label" for="r">R 201</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="12002" value="r301">
+                                <label class="form-check-label" for="r">R 301</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="13000" value="typescript101">
+                                <label class="form-check-label" for="typescript">TYPESCRIPT 101</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="13001" value="typescript201">
+                                <label class="form-check-label" for="typescript">TYPESCRIPT 201</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="13002" value="typescript301">
+                                <label class="form-check-label" for="typescript">TYPESCRIPT 301</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="14000" value="scala101">
+                                <label class="form-check-label" for="scala">SCALA 101</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="14001" value="scala201">
+                                <label class="form-check-label" for="scala">SCALA 201</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="14002" value="scala301">
+                                <label class="form-check-label" for="scala">SCALA 301</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="15000" value="shell101">
+                                <label class="form-check-label" for="shell">SHELL 101</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="15001" value="shell201">
+                                <label class="form-check-label" for="shell">SHELL 201</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="15002" value="shell301">
+                                <label class="form-check-label" for="shell">SHELL 301</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="16000" value="powershell101">
+                                <label class="form-check-label" for="powershell">POWERSHELL 101</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="16001" value="powershell201">
+                                <label class="form-check-label" for="powershell">POWERSHELL 201</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="16002" value="powershell301">
+                                <label class="form-check-label" for="powershell">POWERSHELL 301</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="17000" value="perl101">
+                                <label class="form-check-label" for="perl">PERL 101</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="17001" value="perl201">
+                                <label class="form-check-label" for="perl">PERL 201</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="17002" value="perl301">
+                                <label class="form-check-label" for="perl">PERL 301</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="18000" value="haskell101">
+                                <label class="form-check-label" for="haskell">HASKELL 101</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="18001" value="haskell201">
+                                <label class="form-check-label" for="haskell">HASKELL 201</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="18002" value="haskell301">
+                                <label class="form-check-label" for="haskell">HASKELL 301</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="19000" value="kotlin101">
+                                <label class="form-check-label" for="kotlin">KOTLIN 101</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="19001" value="kotlin201">
+                                <label class="form-check-label" for="kotlin">KOTLIN 201</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="19002" value="kotlin301">
+                                <label class="form-check-label" for="kotlin">KOTLIN 301</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="20000" value="vbnet101">
+                                <label class="form-check-label" for="vbnet">VISUAL BASIC.NET 101</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="20001" value="vbnet201">
+                                <label class="form-check-label" for="vbnet">VISUAL BASIC.NET 201</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="20002" value="vbnet301">
+                                <label class="form-check-label" for="vbnet">VISUAL BASIC.NET 301</label>
+                            </div>
+                        </div>
+                        <!-- Right column of checkboxes -->
+                        <div class="right">
+                            <!-- Checkboxes for various courses -->
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="21000" value="sql 101">
+                                <label class="form-check-label" for="sql">SQL 101</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="21001" value="sql 201">
+                                <label class="form-check-label" for="sql">SQL 201</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="21002" value="sql 301">
+                                <label class="form-check-label" for="sql">SQL 301</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="22000" value="delphi101">
+                                <label class="form-check-label" for="delphi">DELPHI 101</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="22001" value="delphi201">
+                                <label class="form-check-label" for="delphi">DELPHI 201</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="22002" value="delphi301">
+                                <label class="form-check-label" for="delphi">DELPHI 301</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="23000" value="matlab101">
+                                <label class="form-check-label" for="matlab">MATLAB 101</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="23001" value="matlab201">
+                                <label class="form-check-label" for="matlab">MATLAB 201</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="23002" value="matlab301">
+                                <label class="form-check-label" for="matlab">MATLAB 301</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="24000" value="groovy101">
+                                <label class="form-check-label" for="groovy">GROOVY 101</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="24001" value="groovy201">
+                                <label class="form-check-label" for="groovy">GROOVY 201</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="24002" value="groovy301">
+                                <label class="form-check-label" for="groovy">GROOVY 301</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="25000" value="lua101">
+                                <label class="form-check-label" for="lua">LUA 101</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="25001" value="lua201">
+                                <label class="form-check-label" for="lua">LUA 201</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="25002" value="lua301">
+                                <label class="form-check-label" for="lua">LUA 301</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="26000" value="rust101">
+                                <label class="form-check-label" for="rust">RUST 101</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="26001" value="rust201">
+                                <label class="form-check-label" for="rust">RUST 201</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="26002" value="rust301">
+                                <label class="form-check-label" for="rust">RUST 301</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="27000" value="ruby101">
+                                <label class="form-check-label" for="ruby">RUBY 101</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="27001" value="ruby201">
+                                <label class="form-check-label" for="ruby">RUBY 201</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="27002" value="ruby301">
+                                <label class="form-check-label" for="ruby">RUBY 301</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="28000" value="dart101">
+                                <label class="form-check-label" for="dart">DART 101</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="28001" value="dart201">
+                                <label class="form-check-label" for="dart">DART 201</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="28002" value="dart301">
+                                <label class="form-check-label" for="dart">DART 301</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="29000" value="dm101">
+                                <label class="form-check-label" for="dm">DM 101</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="29001" value="dm201">
+                                <label class="form-check-label" for="dm">DM 201</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="29002" value="dm301">
+                                <label class="form-check-label" for="dm">DM 301</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="30000" value="mysql101">
+                                <label class="form-check-label" for="mysql">MYSQL 101</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="30001" value="mysql201">
+                                <label class="form-check-label" for="mysql">MYSQL 201</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="30002" value="mysql301">
+                                <label class="form-check-label" for="mysql">MYSQL 301</label>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <!-- Submit button -->
+                    <div class="mb-3">
+                        <button type="submit" class="btn btn-primary mb-3 mx-auto d-block btn-login">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </main>
+        <!-- Return to top link and footer section -->
+        <div class="container">
+            <a href="#top" id="rtt">Return To Top</a>
+            <hr>
+            <!-- Copyright information -->
+            <footer>&#128187; &copy; 2023, All Rights Reserved. &#128187;</footer>
+        </div>
+    </div>
+    <!-- External JavaScript files -->
+    <script src="../js/backEnd.js" defer></script>
+    <script src="../js/global.js" defer></script>
+    <script src="../js/registration.js" defer></script>
+</body>
+
+</html>
