@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+    Project Title: School Registration System Web App
+
+    Project Description: Create a web application for a school registration system that
+    allows students to register for courses, and their schedules.
+    
+    Final Project
+    Author: Carl Provost
+    Date: 10/23/2023  
+
+    Filename: dashboard.html
+   -->
+
+<head>
+    <!-- Meta information for the document -->
+    <title>PCC School Registration System Web App</title>
+    <!-- Set character encoding and viewport for better rendering -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Define keywords for search engine optimization -->
+    <meta name="keywords" content="school, registration, schedules, dashboard" />
+    <!-- Linking to Bootstrap for styling -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Linking to custom CSS files -->
+    <link href="../css/reset.css" rel="stylesheet" />
+    <link href="../css/layout.css" rel="stylesheet" />
+    <link href="../css/style.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="container-sm">
+        <!-- Header Section -->
+        <header>
+            <div class="navwraper">
+                <!-- Logo Section -->
+                <div class="logo">
+                    <img src="../img/logo200.jpg" alt="Provost Coding College Logo" srcset="" />
+                </div>
+                <!-- Navigation Links -->
+                <div class="nav justify-content-end justify-content-sm-center w-100">
+                    <nav>
+                        <div id="nav-container">
+                            <ul id="list">
+                                <li><a href="registration.html">Registration Page</a></li>
+                                <li><a href="contact.html">Contact Page</a></li>
+                                <li><button id="logOut">Log Out</button></li>
+                            </ul>
+                            <!-- Hamburger menu for small screens -->
+                            <button id="ham"><img src="../img/hamburger.svg" alt="icon" /></button>
+                            <button id="close">X</button>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main content section -->
+        <main>
+            <!-- User welcome message -->
+            <div class="container">
+                <h1 id="userName">Hello and Welcome, [Student Name]</h1>
+                <hr>
+                <!-- Section for displaying registered courses -->
+                <h2 class="dash">Your Registered Courses:</h2>
+                <hr>
+                <ul id="regCourses">
+
+                </ul>
+            </div>
+            <!-- Section for displaying schedule -->
+            <div class="container ">
+                <hr>
+                <h2 class="dash">Schedule:</h2>
+                <hr>
+                <table>
+                    <thead>
+                        <!-- Thead section for a table displaying time slots and days of the week -->
+                        <tr>
+                            <th>Time</th>
+                            <th>Monday</th>
+                            <th>Tuesday</th>
+                            <th>Wednesday</th>
+                            <th>Thursday</th>
+                            <th>Friday</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Schedule time slots -->
+                        <tr>
+                            <td>8:00 AM - 9:00 AM</td>
+                            <td>HTML 101</td>
+                            <td>--</td>
+                            <td>PHP 101</td>
+                            <td>GOLANG 101</td>
+                            <td>--</td>
+                        </tr>
+                        <tr>
+                            <td>9:30 AM - 10:30 AM</td>
+                            <td>--</td>
+                            <td>JAVASCRIPT 101</td>
+                            <td>--</td>
+                            <td>--</td>
+                            <td>--</td>
+                        </tr>
+                        <tr>
+                            <td>11:00 AM - 12:00 PM</td>
+                            <td>--</td>
+                            <td>PYTHON 101</td>
+                            <td>--</td>
+                            <td>--</td>
+                            <td>POWERSHELL 101</td>
+                        </tr>
+                        <tr>
+                            <td>1:00 PM - 2:00 PM</td>
+                            <td>CSS 101</td>
+                            <td>--</td>
+                            <td>--</td>
+                            <td>SHELL 101</td>
+                            <td>--</td>
+                        </tr>
+                        <tr>
+                            <td>2:30 PM - 3:30 PM</td>
+                            <td>--</td>
+                            <td>--</td>
+                            <td>--</td>
+                            <td>--</td>
+                            <td>KOTLIN 101</td>
+                        </tr>
+                        <tr>
+                            <td>4:00 PM - 5:00 PM</td>
+                            <td>--</td>
+                            <td>--</td>
+                            <td>C++ 101</td>
+                            <td>--</td>
+                            <td>--</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- Section for displaying notifications -->
+            <div class="container">
+                <hr>
+                <h2 class="dash">Notifications:</h2>
+                <hr>
+                <ul>
+                    <!-- Notification items -->
+                    <li>Information about upcoming exams:</li>
+                    <li>Due dates on assignment:</li>
+                    <li>Canceled classes:</li>
+                    <li>Reminder: Registration for next semeter opens next week:</li>
+                    <li>Reminder: Payment due date:</li>
+                </ul>
+            </div>
+        </main>
+        <!-- Return to top link and footer section -->
+        <div class="container">
+            <a href="#top" id="rtt">Return To Top</a>
+            <hr>
+            <!-- Copyright information -->
+            <footer>&#128187; &copy; 2023, All Rights Reserved. &#128187;</footer>
+        </div>
+    </div>
+    <!-- External JavaScript files -->
+    <script src="../js/global.js" defer></script>
+    <script src="../js/backEnd.js" defer></script>
+    <script src="../js/dashboard.js" defer></script>
+</body>
+
+</html>

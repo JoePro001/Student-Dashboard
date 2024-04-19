@@ -1,0 +1,170 @@
+/* Set character encoding to UTF-8 */
+@charset "utf-8";
+
+/*  Project Title: School Registration System Web App
+
+    Project Description: Create a web application for a school registration system that
+    allows students to register for courses, and their schedules.
+    
+    Final Project
+    Author: Carl Provost
+    Date: 10/23/2023  
+
+    Filename: layout.css
+ */
+
+
+/* Apply box-sizing to all elements for consistent box models */
+* {
+    box-sizing: border-box;
+}
+
+/* Style for the header section */
+header {
+    width: 100%;
+}
+
+/* Style for the navigation wrapper */
+.navwraper {
+    display: flex;
+}
+
+/* Style for the navigation unordered list */
+nav ul {
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Style for the navigation list items */
+nav li {
+    display: inline-block;
+    margin-top: 50px;
+    margin-right: 50px;
+}
+
+/* Style for the container list items */
+.container li {
+    list-style: none;
+    display: flex;
+}
+
+/* Style for the right-div section */
+.right-div {
+    padding-top: 25px;
+}
+
+/* Style for the homeLogo section */
+.homeLogo {
+    padding-top: 20px;
+    margin: auto;
+}
+
+/* Style for the footer section */
+footer {
+    padding-bottom: 20px;
+    margin-bottom: 50px;
+}
+
+
+/* Media queries for different screen sizes */
+
+/* Extra Large screens */
+@media screen and (min-width: 1201px) {
+
+    #ham,
+    #close {
+        display: none;
+    }
+}
+
+/* Large screens */
+@media screen and (max-width: 1200px) {
+
+    #ham,
+    #close {
+        display: none;
+    }
+}
+
+/* Desktops screens */
+@media screen and (max-width: 992px) {
+    .logo {
+        text-align: center;
+    }
+
+    .logo img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    nav ul {
+        margin: 0;
+    }
+
+    nav li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    #ham,
+    #close {
+        display: none;
+    }
+}
+
+/* Tablets screens */
+@media screen and (max-width: 768px) {
+    .logo {
+        text-align: center;
+    }
+
+    .logo img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .nav {
+        margin-top: 10px;
+    }
+
+    nav ul {
+        margin: 0;
+    }
+
+    nav li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    #ham,
+    #close {
+        display: none;
+    }
+}
+
+/* Mobile phones screens */
+@media screen and (max-width: 576px) {
+    .logo {
+        text-align: center;
+    }
+
+    .logo img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .nav {
+        margin-top: 10px;
+    }
+
+    nav ul {
+        margin: 0;
+    }
+
+    nav li {
+        display: block;
+        margin: 10px 0;
+    }
+}
